@@ -6,9 +6,9 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		print10();
+//		print10();
 
-		changeCalculator(20d, 4.58d);
+		changeCalculator(50d, 23.14d);
 
 	}
 

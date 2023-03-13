@@ -9,6 +9,9 @@ public class Main {
 //		Arrays.int10Array();
 //		Arrays.multArray();
 //		Arrays.digitAdd(74);
+
+		System.out.println(Arrays.numToString(6059));
+
 	}
 
 }

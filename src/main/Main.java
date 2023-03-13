@@ -10,7 +10,11 @@ public class Main {
 //		Arrays.multArray();
 //		Arrays.digitAdd(74);
 
-		System.out.println(Arrays.numToString(6059));
+//		System.out.println(Arrays.numToString(6059));
+
+		for (int i = 1; i <= 9999; i++) {
+			System.out.println(Arrays.numToString(i));
+		}
 
 	}
 

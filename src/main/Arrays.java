@@ -20,4 +20,22 @@ public class Arrays {
 		}
 
 	}
+
+	public static void multArray() {
+		int[] int10Array = new int[10];
+
+		for (int i = 0; i < Array.getLength(int10Array); i++) {
+			int10Array[i] = i;
+			System.out.println(int10Array[i]);
+
+		}
+
+		for (int i = 0; i < Array.getLength(int10Array); i++) {
+			int10Array[i] = int10Array[i] * 10;
+			System.out.println(int10Array[i]);
+
+		}
+
+	}
+
 }

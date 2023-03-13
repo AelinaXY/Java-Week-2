@@ -7,7 +7,7 @@ public class Main {
 //		Loops.changeCalculator(50d, 23.14d);
 
 //		Arrays.int10Array();
-
+		Arrays.multArray();
 	}
 
 }

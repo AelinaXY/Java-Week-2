@@ -12,9 +12,14 @@ public class Main {
 
 //		System.out.println(Arrays.numToString(6059));
 
-		for (int i = 1; i <= 9999; i++) {
-			System.out.println(Arrays.numToString(i));
-		}
+//		for (int i = 1; i <= 9999; i++) {
+//			System.out.println(Arrays.numToString(i));
+//		}
+
+		System.out.println(stringMethods.wordCount("Hello"));
+		System.out.println(stringMethods.wordCount("Hello World"));
+		System.out.println(stringMethods.wordCount("Hello World, My name is El"));
+		System.out.println(stringMethods.wordCount(""));
 
 	}
 

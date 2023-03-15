@@ -26,6 +26,10 @@ public class Main {
 		Person p3 = new Person("test3",3,"title3");
 		
 		p1.stringOutput();
+		
+		p2.stringOutput();
+		
+		
 
 
 	}

@@ -20,17 +20,28 @@ public class Main {
 //		System.out.println(stringMethods.wordCount("Hello World"));
 //		System.out.println(stringMethods.wordCount("Hello World, My name is El"));
 //		System.out.println(stringMethods.wordCount(""));
-		
-		Person p1 = new Person("test1",1,"title1");
-		Person p2 = new Person("test2",2,"title2");
-		Person p3 = new Person("test3",3,"title3");
-		
-		p1.stringOutput();
-		
-		p2.stringOutput();
-		
-		
 
+//		Person p1 = new Person("test1",1,"title1");
+//		Person p2 = new Person("test2",2,"title2");
+//		Person p3 = new Person("test3",3,"title3");
+//		
+//		p1.stringOutput();
+//		
+//		p2.stringOutput();
+
+		Garage weirdGarage = new Garage();
+
+		Car blueCar = new Car(4, "Blue", 2);
+		Motorbike blackBike = new Motorbike(2, "Black", "Black");
+		Plane redPlane = new Plane(3, "Red", 2);
+
+		weirdGarage.addVehicle(blueCar);
+		weirdGarage.addVehicle(blackBike);
+		weirdGarage.addVehicle(redPlane);
+
+		weirdGarage.removeVehicleType("Car");
+		weirdGarage.removeVehicleType("Plane");
+		weirdGarage.removeVehicleType("Motorbike");
 
 	}
 

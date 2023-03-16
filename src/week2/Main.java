@@ -31,13 +31,18 @@ public class Main {
 
 		Garage weirdGarage = new Garage();
 
-		Car blueCar = new Car(4, "Blue", false, 2, 1);
-		Motorbike blackBike = new Motorbike(2, "Black", false, "Black", 2);
-		Plane redPlane = new Plane(3, "Red", false, 2, 3);
+		Car blueCar = new Car(4, "Blue", true, 2, 1);
+		Motorbike blackBike = new Motorbike(2, "Black", true, "Black", 2);
+		Plane redPlane = new Plane(3, "Red", true, 2, 3);
+		Car blueCar2 = new Car(3, "Blue", true, 2, 4);
 
 		weirdGarage.addVehicle(blueCar);
 		weirdGarage.addVehicle(blackBike);
 		weirdGarage.addVehicle(redPlane);
+		weirdGarage.addVehicle(blueCar2);
+
+		weirdGarage.removeById(1);
+		weirdGarage.fixById(4);
 
 		weirdGarage.calculateGarageBill();
 

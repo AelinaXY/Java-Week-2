@@ -1,6 +1,6 @@
 package week2;
 
-public class Car extends vehicle {
+public class Car extends Vehicle {
 
 	int doors;
 

@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Garage {
 
-	ArrayList<vehicle> vehiclesInGarage = new ArrayList<vehicle>();
+	ArrayList<Vehicle> vehiclesInGarage = new ArrayList<Vehicle>();
 
 	public Garage() {
 
 	}
 
-	public void addVehicle(vehicle v) {
+	public void addVehicle(Vehicle v) {
 		vehiclesInGarage.add(v);
 		System.out.println("Vehicle " + v.toString() + " added");
 	}
@@ -39,28 +39,58 @@ public class Garage {
 	}
 
 	public void calculateGarageBill() {
-		for (vehicle i : vehiclesInGarage) {
+		for (Vehicle i : vehiclesInGarage) {
 			calculateBill(i);
 		}
 
 	}
 
-	public void calculateBill(vehicle i) {
-		switch (i.getClass().toString()) {
+	public void calculateBill(Vehicle i) {
+		switch (i.getClass().getSimpleName()) {
 
-		case "class week2.Motorbike":
-			System.out.println("Bill to fix Motorbike ID: " + i.getId() + " is £" + i.getColour().length() * 100);
+		case "Motorbike":
+			if (i.isNeedsFixing()) {
+				System.out.println("Bill to fix Motorbike ID: " + i.getId() + " is £" + i.getColour().length() * 100);
+				i.setNeedsFixing(false);
+			}
 			break;
 
-		case "class week2.Car":
-			System.out.println("Bill to fix Car ID: " + i.getId() + " is £" + i.getWheels() * 200);
+		case "Car":
+			if (i.isNeedsFixing()) {
+				System.out.println("Bill to fix Car ID: " + i.getId() + " is £" + i.getWheels() * 200);
+				i.setNeedsFixing(false);
+			}
 			break;
 
-		case "class week2.Plane":
-			System.out.println("Bill to fix Plane, ID: " + i.getId() + " is £"
-					+ ((Plane) i).getWings() * 200 * i.getColour().length());
+		case "Plane":
+			if (i.isNeedsFixing()) {
+				System.out.println("Bill to fix Plane, ID: " + i.getId() + " is £"
+						+ ((Plane) i).getWings() * 200 * i.getColour().length());
+				i.setNeedsFixing(false);
+			}
 			break;
 		}
 
+	}
+
+	public void removeById(int id) {
+		Vehicle returnedVehicle = findVehicleByID(id);
+		vehiclesInGarage.remove(returnedVehicle);
+		System.out.println("Vehicle with id " + id + " removed");
+	}
+
+	public void fixById(int id) {
+		Vehicle returnedVehicle = findVehicleByID(id);
+		calculateBill(returnedVehicle);
+	}
+
+	private Vehicle findVehicleByID(int id) {
+		for (Vehicle i : vehiclesInGarage) {
+			if (i.getId() == id) {
+				return i;
+			}
+		}
+
+		return null;
 	}
 }

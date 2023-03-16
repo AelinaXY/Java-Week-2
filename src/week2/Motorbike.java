@@ -1,6 +1,6 @@
 package week2;
 
-public class Motorbike extends vehicle {
+public class Motorbike extends Vehicle {
 
 	String handlesColour;
 

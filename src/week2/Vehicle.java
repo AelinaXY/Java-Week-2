@@ -1,12 +1,12 @@
 package week2;
 
-public class vehicle {
+public class Vehicle {
 
 	private int wheels, id;
 	private String colour;
 	private boolean needsFixing = false;
 
-	public vehicle(int w, String c, boolean f, int i) {
+	public Vehicle(int w, String c, boolean f, int i) {
 		this.wheels = w;
 		this.colour = c;
 		this.needsFixing = f;

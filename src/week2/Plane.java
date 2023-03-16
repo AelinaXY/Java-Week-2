@@ -1,6 +1,6 @@
 package week2;
 
-public class Plane extends vehicle {
+public class Plane extends Vehicle {
 
 	private int wings;
 

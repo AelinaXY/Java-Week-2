@@ -31,9 +31,9 @@ public class Main {
 
 		Garage weirdGarage = new Garage();
 
-		Car blueCar = new Car(4, "Blue", 2);
-		Motorbike blackBike = new Motorbike(2, "Black", "Black");
-		Plane redPlane = new Plane(3, "Red", 2);
+		Car blueCar = new Car(4, "Blue", false, 2);
+		Motorbike blackBike = new Motorbike(2, "Black", false, "Black");
+		Plane redPlane = new Plane(3, "Red", false, 2);
 
 		weirdGarage.addVehicle(blueCar);
 		weirdGarage.addVehicle(blackBike);

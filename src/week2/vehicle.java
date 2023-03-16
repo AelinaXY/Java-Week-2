@@ -2,14 +2,15 @@ package week2;
 
 public class vehicle {
 
-	private int wheels;
+	private int wheels, id;
 	private String colour;
 	private boolean needsFixing = false;
 
-	public vehicle(int w, String c, boolean f) {
+	public vehicle(int w, String c, boolean f, int i) {
 		this.wheels = w;
 		this.colour = c;
 		this.needsFixing = f;
+		this.id = i;
 	}
 
 	public void fixVehicle() {
@@ -46,6 +47,14 @@ public class vehicle {
 
 	public void setNeedsFixing(boolean needsFixing) {
 		this.needsFixing = needsFixing;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 }

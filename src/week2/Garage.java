@@ -37,4 +37,30 @@ public class Garage {
 			}
 		}
 	}
+
+	public void calculateGarageBill() {
+		for (vehicle i : vehiclesInGarage) {
+			calculateBill(i);
+		}
+
+	}
+
+	public void calculateBill(vehicle i) {
+		switch (i.getClass().toString()) {
+
+		case "class week2.Motorbike":
+			System.out.println("Bill to fix Motorbike ID: " + i.getId() + " is £" + i.getColour().length() * 100);
+			break;
+
+		case "class week2.Car":
+			System.out.println("Bill to fix Car ID: " + i.getId() + " is £" + i.getWheels() * 200);
+			break;
+
+		case "class week2.Plane":
+			System.out.println("Bill to fix Plane, ID: " + i.getId() + " is £"
+					+ ((Plane) i).getWings() * 200 * i.getColour().length());
+			break;
+		}
+
+	}
 }
